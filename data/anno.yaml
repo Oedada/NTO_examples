@@ -1,0 +1,11 @@
+path: /home/oedada/Projects/experiments/NTO/Final/tracking/data/parking
+train: train
+val: valid
+test: test
+
+# Classes
+names:
+  0: spaces
+  1: space-empty
+  2: space-occupied
+
