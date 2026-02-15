@@ -1,44 +1,44 @@
-#Shell#
-##подготовка к работе##
+# Shell
+## подготовка к работе
 ```bash
 mkdir -p ~/catkin_ws/src
 catkin_make
 ```
-##работа с пакетами##
+## работа с пакетами
 ```bash
 catkin_create_pkg *название_пакета* *зависимость1* *зависимость2*..
 ```
 
-##работа с нодами##
+## работа с нодами
 ```bash
 rosnode list
 rosnode info *нода*
 rosnode kill *нода*
 ```
 
-##работа с топиками##
+## работа с топиками
 ```bash
 rostopic list
 rostopic echo *имя топика*
 ```
 
-##после сборки##
-###настройка окружения###
+## после сборки
+### настройка окружения
 ```bash
 source ~/catkin_ws/devel/setup.bash
 ```
-###запуск roscore###
+### запуск roscore
 ```bash
 roscore
 ```
-###запуск нода/нодов###
+### запуск нода/нодов
 ```bash
 rosrun *нода* *исполняющий_файл*
 ```
 
-#Python#
-##примеры###
-###publisher###
+# Python
+## примеры
+### publisher
 ```python
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
@@ -70,7 +70,7 @@ while not rospy.is_shutdown():
     delay.sleep()
 
 ```
-##subscriber
+## subscriber
 ```python
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
@@ -92,23 +92,23 @@ rospy.spin()
 
 ```
 
-###обязательно писать в начале программы каждой ноды!###
+### обязательно писать в начале программы каждой ноды!
 ```python
 #!/usr/bin/env python3
 #-*- coding: utf-8 -*-
 ```
 
-##полезное##
-###типы данных (std_msgs.msg):###
+## полезное
+### типы данных (std_msgs.msg):
 Bool, Byte, Char, Int8/16/32/64, Float32/64, String и др.
-###логирование:###
+### логирование:
 ```python
 rospy.loginfo(string)
 rospy.logwarn(string)
 rospy.logerr(string)
 rospy.logfatal(string)
 ```
-###сон###
+### сон
 ```python
 rospy.Rate(частота).sleep()
 rospy.sleep(время_в_секундах)
